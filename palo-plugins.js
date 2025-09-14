@@ -1,4 +1,3 @@
-//<![CDATA[
 //--------------------------------------------------------
 // Theia Sticky Sidebar | v1.7.0
 //--------------------------------------------------------
@@ -31,8 +30,4 @@ $(function(){let t={set(t,e,o){let i=new Date;i.setTime(i.getTime()+864e5*o),doc
 // Text Increase Decrease Plugin
 //-------------------------------
 $(document).ready((function(){function n(n){const t=window.getComputedStyle(n,null).getPropertyValue("font-size");return parseFloat(t)}function t(t,o,e){for(let c=0;c<t.length;c++){const i=t[c];let l=0;l=e?17:o?n(i)+1:n(i)-1,i.style.fontSize=l.toString()+"px"}}$("#increase-plugin-ac").click((function(){t($(".post-body"),!0,!1)})),$("#normal-plugin-ac").click((function(){t($(".post-body"),!1,!0)})),$("#decrease-plugin-ac").click((function(){t($(".post-body"),!1,!1)}))}));
-//]]>
-
-
-
 
