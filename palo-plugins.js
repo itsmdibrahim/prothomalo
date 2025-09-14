@@ -18,7 +18,7 @@
 //--------------------------------------------------------
 // Lazy Thumbs by blogger
 //--------------------------------------------------------
-!function(a){a.fn.lazyify=function(){return this.each(function(){var t=a(this),d=t.attr("data-image"),w=Math.round(t.width())||200,h=Math.round(t.height())||200,s="w"+w+"-h"+h+"-p-k-no-nu",i="";d.match("/s72-c")?i=d.replace("/s72-c","/"+s):d.match("/w72-h")?i=d.replace(/\/w\d+-h\d+-p-k-no-nu/,"/"+s):d.match("=w72-h")?i=d.replace(/=w\d+-h\d+-p-k-no-nu/,"="+s):i=d,a(window).on("load resize scroll",e=>{var n=a(window).height(),r=a(window).scrollTop(),o=t.offset().top;o<n+r&&(new Image).onload=function(){t.attr("style","background-image:url("+this.src+")").addClass("lazy-ify")},n.src=i})})}}(jQuery);
+!function(n){n.fn.lazyify=function(){return this.each(function(){var a,t=n(this),o=t.attr("data-image"),c="w"+(Math.round(t.width())||200)+"-h"+(Math.round(t.height())||200)+"-p-k-no-nu",r="";function e(){var a,o=n(window).height();if(n(window).scrollTop()+o>t.offset().top){var c=new Image;c.onload=function(){t.attr("style","background-image:url("+this.src+")").addClass("lazy-ify")},c.src=r}}r=o.match("/s72-c")?o.replace("/s72-c","/"+c):o.match("/w72-h")?o.replace(/\/w\d+-h\d+-p-k-no-nu/,"/"+c):o.match("=w72-h")?o.replace(/=w\d+-h\d+-p-k-no-nu/,"="+c):o,n(window).on("load resize scroll",e),e()})}}(jQuery);
 //--------------------------------------------------------
 // jQuery replaceText by "Cowboy" Ben Alman
 //--------------------------------------------------------
@@ -32,6 +32,7 @@ $(function(){let t={set(t,e,o){let i=new Date;i.setTime(i.getTime()+864e5*o),doc
 //-------------------------------
 $(document).ready((function(){function n(n){const t=window.getComputedStyle(n,null).getPropertyValue("font-size");return parseFloat(t)}function t(t,o,e){for(let c=0;c<t.length;c++){const i=t[c];let l=0;l=e?17:o?n(i)+1:n(i)-1,i.style.fontSize=l.toString()+"px"}}$("#increase-plugin-ac").click((function(){t($(".post-body"),!0,!1)})),$("#normal-plugin-ac").click((function(){t($(".post-body"),!1,!0)})),$("#decrease-plugin-ac").click((function(){t($(".post-body"),!1,!1)}))}));
 //]]>
+
 
 
 
